@@ -77,8 +77,8 @@ class Maze:
             for Col in range(self.nCol):
                 iCell = self[Col, Row]
                 if  iCell.numVisited == 0:
+                    iCell.numVisited += 1
                     nCells = self.find_neighboors(iCell)
-                    iCell.isVisited = True
                     if   "South" in nCells and "East" in nCells: jCell = nCells[choice(['South', 'East'])];
                     elif "South" in nCells                     : jCell = nCells['South'];
                     elif "East"  in nCells                     : jCell = nCells['East' ];
