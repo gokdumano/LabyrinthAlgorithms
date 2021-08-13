@@ -1,7 +1,8 @@
 from random import choice
+
 class Cell:
-    def __init__(self, Row, Col):
-        self.Row, self.Col = Row, Col
+    def __init__(self, Col, Row):
+        self.Col, self.Row = Col, Row
         self.numVisited    = 0
         
         self.DirPairs = {
@@ -14,11 +15,14 @@ class Cell:
         self.Walls    = {Dir: True for Dir in self.DirPairs.keys()}
         
     def __repr__(self):
-        return f'<Cell({self.Row},{self.Col})>'
+        return f'<Cell({self.Col},{self.Row})>'
         
     def __str__(self):
         # Is there a Wall at '{East}{North}{West}{South}' ?
-        return ''.join(['1' if Wall else '0' for Wall in self.Walls.values()]) + ' '
+        return ''.join(['1' if Wall else '0' for Wall in self.Walls.values()])
+    
+    def __format__(self, formatspec='s'):
+        return self.__str__()
     
     def __getitem__(self, key):
         return self.Walls.get(key)
@@ -27,12 +31,12 @@ class Cell:
         self.Walls[key] = value
         
     def relDir(self, other):
-        delta = (other.Row - self.Row, other.Col - self.Col)
+        delta = (other.Col - self.Col, other.Row - self.Row)
         
-        return {( 0, 1): 'East' ,
-                (-1, 0): 'North',
-                ( 0,-1): 'West' ,
-                ( 1, 0): 'South'}.get(delta)
+        return {( 1, 0): 'East' ,
+                ( 0,-1): 'North',
+                (-1, 0): 'West' ,
+                ( 0, 1): 'South'}.get(delta)
     
     def linkCell(self, other):
         Dir = self.relDir(other)
@@ -40,20 +44,20 @@ class Cell:
             self[Dir]      = False
             DirPair        = self.DirPairs[Dir]
             other[DirPair] = False
-        
+            
 class Maze:
     def __init__(self, maze_size, maze_start=(0,0)):
-        self.nRow, self.nCol = maze_size
-        self.iRow, self.iCol = maze_start
+        self.nCol, self.nRow = maze_size
+        self.iCol, self.iRow = maze_start
         self.Board           = {(Col,Row): Cell(Col,Row) for Col in range(self.nCol) for Row in range(self.nRow)}
     
     def __repr__(self):
-        return f'<Maze({self.nRow},{self.nCol})>'
+        return f'<Maze({self.nCol},{self.nRow})>'
     
     def __str__(self):
-        text = ""
+        text = ''
         for num, cell in enumerate(self.Board.values(), start = 1):
-            text += str(cell)
+            text += str(cell) + ' '
             if num % self.nCol == 0: text += '\n'
         return text
             
@@ -61,57 +65,24 @@ class Maze:
         return self.Board.get(index)
     
     def find_neighboors(self, iCell, include_visited=True):
-        iRow, iCol = iCell.Row, iCell.Col
+        iCol, iRow = iCell.Col, iCell.Row
         nCells     = {}
         
-        for dRow, dCol in ((1,0), (-1,0), (0,1), (0,-1)):
-            jRow, jCol = iRow + dRow, iCol + dCol
-            jCell      = self[jRow, jCol]
+        for dCol, dRow in ((1,0), (-1,0), (0,1), (0,-1)):
+            jCol, jRow = iCol + dCol, iRow + dRow
+            jCell      = self[jCol, jRow]
             if jCell is not None and (jCell.numVisited == 0 or include_visited and jCell.numVisited != 0):
                 Dir    = iCell.relDir(jCell)
                 nCells[Dir] = jCell
         return nCells
         
-    def gen(self):
+    def BinaryTree(self):
         for Row in range(self.nRow):
             for Col in range(self.nCol):
                 iCell = self[Col, Row]
-                if  iCell.numVisited == 0:
-                    iCell.numVisited += 1
-                    nCells = self.find_neighboors(iCell)
-                    if   "South" in nCells and "East" in nCells: jCell = nCells[choice(['South', 'East'])];
-                    elif "South" in nCells                     : jCell = nCells['South'];
-                    elif "East"  in nCells                     : jCell = nCells['East' ];
-                    iCell.linkCell(jCell)
-                    
-size   = (10, 25)
-maze   = Maze(size)
-print("Creating a blank maze...")
-print(maze)
-maze.gen()
-print("Generating the maze...")
-print(maze)
-
-# >> Creating a blank maze...
-# >> 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 
-# >> 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 
-# >> 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 
-# >> 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 
-# >> 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 
-# >> 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 
-# >> 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 
-# >> 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 
-# >> 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 
-# >> 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 
-# >> 
-# >> Generating the maze...
-# >> 1110 0111 1100 0111 0101 1100 0111 0101 1100 1110 0011 1100 0011 0101 0101 1000 0111 1100 0011 1000 0111 1000 1110 1110 0111 
-# >> 1000 1110 1010 0111 1000 1110 0011 1000 0011 0101 0001 1000 1010 0111 1000 0011 1100 0011 0101 0101 0101 1000 0011 0101 1000 
-# >> 1110 0011 0101 1100 0111 1100 1010 1110 1110 1010 1010 0111 1100 1010 0111 1000 0011 1000 0011 1000 0011 1100 0011 1000 0111 
-# >> 1000 0111 0001 0101 1000 1110 0011 0101 0001 0101 1000 0111 0101 0101 1000 0011 1100 1110 0111 1100 1010 1110 1110 1110 1010 
-# >> 1110 0011 0001 0101 1000 1010 0011 0001 1000 1010 1010 0111 1100 0111 0001 0001 1100 0111 1000 1010 1010 0111 0001 1100 1110 
-# >> 0111 1000 0111 0001 1000 1010 0111 1100 1010 0011 1100 1010 0111 1100 1010 1010 0111 1000 0011 0101 1000 0011 1100 0011 1000 
-# >> 1010 0111 0001 1100 0111 1000 1110 0011 1100 1010 1010 0111 1100 0011 0101 0001 0001 1100 0011 1000 0011 0101 1000 0111 1100 
-# >> 0111 1100 0011 1100 1010 0111 0101 1000 0111 1000 1110 0011 1100 1010 1010 1110 0111 0001 1100 1010 0011 1100 0011 1000 1010 
-# >> 0011 0101 1100 1010 0011 0101 1000 1110 0011 1000 0111 0101 0001 0001 1100 0111 0001 1000 0111 1000 1110 0111 1100 0111 1000 
-# >> 1110 1110 0011 1100 1010 1010 0111 0001 0101 1000 1010 1010 0111 1000 1010 0011 0101 0101 0101 0001 0001 0001 0101 0001 1001 
+                iCell.numVisited += 1
+                nCells = self.find_neighboors(iCell, False)
+                if   "South" in nCells and "East" in nCells: jCell = nCells[choice(['South', 'East'])];
+                elif "South" in nCells                     : jCell = nCells['South'];
+                elif "East"  in nCells                     : jCell = nCells['East' ];
+                iCell.linkCell(jCell)
