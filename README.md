@@ -107,7 +107,7 @@
     <td>-</td>
   </tr>
   <tr>
-    <td>GrowingTreeAlgorithm</td>
+    <td>GrowingTreeAlgorithm 🥉</td>
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
@@ -125,7 +125,7 @@
     <td>8.8348344</td>
   </tr>
   <tr>
-    <td>SidewinderAlgorithm</td>
+    <td>SidewinderAlgorithm 🥈</td>
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
