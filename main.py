@@ -1,38 +1,39 @@
-from utils import SurfRect
 from maze import Maze
-import pygame, sys
+import pygame, sys, utils
 pygame.init()
 
-MAZECOL        = 25
-MAZEROW        = 25
+MAZECOL        = 20
+MAZEROW        = 20
 MAZESIZE       = (MAZECOL, MAZEROW)
 
-TILEWIDTH      = 10
-TILEHEIGHT     = 10
+Path           = 'C:/Users/Punisher_12/Documents/GitHub/LabyrinthAlgorithms/Tiles/{:s}.png'.format
+maze           = Maze(MAZESIZE)
+#utils.BinaryTree(maze)
+#utils.Sidewinder(maze)
+#utils.GrowingTree(maze)
+utils.AldousBroder(maze)
 
+#maze._reset()
+
+TILEWIDTH      = 20
+TILEHEIGHT     = 20
 DISPLAYWIDTH   = MAZECOL * TILEWIDTH
 DISPLAYHEIGHT  = MAZEROW * TILEHEIGHT
-
 DISPLAYSURF    = pygame.display.set_mode((DISPLAYWIDTH,DISPLAYHEIGHT))
+pygame.display.set_caption(repr(maze))
 DISPLAYRECT    = DISPLAYSURF.get_rect()
-
 CLOCK          = pygame.time.Clock()
 FRAMERATE      = 60
 PLAY           = True
 
-Path           = 'C:/Users/Punisher_12/Documents/GitHub/LabyrinthAlgorithms/Tiles/{:s}.png'.format
-maze           = Maze(MAZESIZE)
-maze.BinaryTree()
-
 DISPLAYSURF.fill('#ffffff')
-
 for NumRow in range(maze.nRow):
     for NumCol in range(maze.nCol):
         TilePath    = Path(maze[NumCol, NumRow])
         TileTopleft = (NumCol * TILEWIDTH, NumRow * TILEHEIGHT)
-        TileSurf, TileRect = SurfRect(TilePath, TILEWIDTH, TILEHEIGHT, topleft=TileTopleft)
-        DISPLAYSURF.blit(TileSurf, TileRect)
-        
+        TileSurf, TileRect = utils.SurfRect(TilePath, TILEWIDTH, TILEHEIGHT, topleft=TileTopleft)
+        DISPLAYSURF.blit(TileSurf, TileRect)   
+
 while PLAY:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
