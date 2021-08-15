@@ -143,3 +143,39 @@
   </tr>
 </tbody>
 </table>
+
+## Results
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Algorithm</th>
+    <th colspan="2">Maze Size</th>
+  </tr>
+  <tr>
+    <td>50x50</td>
+    <td>250x250</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>AldousBroder</td>
+    <td><img src="https://tablesgenerator.com/images/resultsAldousBroder_50_50.PNG" width="400" height="300"></td>
+    <td>AldousBroder_50_50.PNG</td>
+  </tr>
+  <tr>
+    <td>BinaryTree_50_50</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>GrowingTree</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sidewinder</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
