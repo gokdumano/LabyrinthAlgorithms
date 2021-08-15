@@ -160,22 +160,22 @@
   <tr>
     <td>AldousBroder</td>
     <td><img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/results/AldousBroder_50_50.PNG" width="150" height="150"></td>
-    <td>AldousBroder_50_50.PNG</td>
+    <td><img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/results/AldousBroder_250_250.PNG" width="150" height="150"></td>
   </tr>
   <tr>
-    <td>BinaryTree_50_50</td>
-    <td></td>
-    <td></td>
+    <td>BinaryTree</td>
+    <td><img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/results/BinaryTree_50_50.PNG" width="150" height="150"></td>
+    <td><img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/results/BinaryTree_250_250.PNG" width="150" height="150"></td>
   </tr>
   <tr>
     <td>GrowingTree</td>
-    <td></td>
-    <td></td>
+    <td><img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/results/GrowingTree_50_50.PNG" width="150" height="150"></td>
+    <td><img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/results/GrowingTree_250_250.PNG" width="150" height="150"></td>
   </tr>
   <tr>
     <td>Sidewinder</td>
-    <td></td>
-    <td></td>
+    <td><img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/results/Sidewinder_50_50.PNG" width="150" height="150"></td>
+    <td><img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/results/Sidewinder_250_250.PNG" width="150" height="150"></td>
   </tr>
 </tbody>
 </table>
