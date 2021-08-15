@@ -124,8 +124,8 @@
 <table>
 <thead>
   <tr>
-    <th rowspan="2">Algorithm</th>
-    <th colspan="2">Maze Size</th>
+    <th rowspan="2">Algorithm 🧙‍</th>
+    <th colspan="2">Labyrinth Size 📐</th>
   </tr>
   <tr>
     <td>50x50</td>
