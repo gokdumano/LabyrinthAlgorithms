@@ -159,7 +159,7 @@
 <tbody>
   <tr>
     <td>AldousBroder</td>
-    <td><img src="https://tablesgenerator.com/images/resultsAldousBroder_50_50.PNG" width="400" height="300"></td>
+    <td><img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/results/AldousBroder_50_50.PNG" width="400" height="300"></td>
     <td>AldousBroder_50_50.PNG</td>
   </tr>
   <tr>
