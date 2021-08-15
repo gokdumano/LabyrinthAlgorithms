@@ -5,7 +5,7 @@
 <thead>
   <tr>
     <th rowspan="2"><br>Algorithm 🧙‍♂️<br></th>
-    <th colspan="4">Maze Size 📐<br>(ColxRow)</th>
+    <th colspan="4">Labyrinth Size 📐<br>(ColxRow)</th>
     <th colspan="4">Generation Time 🕒<br>(seconds)</th>
   </tr>
   <tr>
