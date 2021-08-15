@@ -176,6 +176,6 @@
 <p>Then they formed 'Maze's to fulfill their destiny...</p>
 <img src="http://www.mazesforprogrammers.com/images/cover.jpg"
      alt="Lots of Fun and Knowledge This Book Has"
-     width="450"
-     height="375"
+     width="375"
+     height="450"
      title="Lots of Fun and Knowledge This Book Has...">
