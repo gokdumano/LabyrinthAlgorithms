@@ -4,8 +4,8 @@
 ## Base Classes (Simple Yet Effective)
 <img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/uml/Cell.png"
      alt="Everything started with a single 'Cell'"
-     width="400"
-     height="341"
+     width="300"
+     height="200"
      title="Everything started with a single 'Cell'">
      
 <img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/uml/Maze.png"
