@@ -173,9 +173,10 @@
 </table>
 
 ## Lots of Fun and Knowledge This Book Has
-<p>Then they formed 'Maze's to fulfill their destiny...</p>
+<a href="http://www.mazesforprogrammers.com">
 <img src="http://www.mazesforprogrammers.com/images/cover.jpg"
      alt="Lots of Fun and Knowledge This Book Has"
-     width="375"
-     height="450"
+     width="320"
+     height="385"
      title="Lots of Fun and Knowledge This Book Has...">
+</a>
