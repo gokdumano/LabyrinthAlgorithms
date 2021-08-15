@@ -16,7 +16,7 @@ def SurfRect(path, nWidth=None, nHeight=None, HasAlphaChannel=True, **pos):
     imRect = imSurf.get_rect(**pos)
     return imSurf, imRect
 
-def RecursiveBacktracker(maze):
+def RecursiveBacktrackerAlgorithm(maze):
     ...
     
 def EllersAlgorithm():
@@ -47,8 +47,10 @@ def AldousBroderAlgorithm(maze):
             iCell.link_cells(jCell); jCell.numVisited += 1; NumUnvisited -= 1
             
         iCell  = jCell
-    Stop = perf_counter()    
-    maze.Status = f'#CreatedByAldousBroder({Stop - Start:.5f})'
+    Stop  = perf_counter()
+    Delta = Stop - Start
+    maze.Status = f'#CreatedByAldousBroder({Delta:.5f})'
+    return Delta
     
 def WilsonsAlgorithm(maze):
     ...
@@ -76,8 +78,10 @@ def GrowingTreeAlgorithm(maze):
         else:
             iCell = Cells.pop()
     
-    Stop = perf_counter()    
-    maze.Status = f'#CreatedByGrowingTree({Stop - Start:.5f})'
+    Stop = perf_counter() 
+    Delta = Stop - Start   
+    maze.Status = f'#CreatedByGrowingTree({Delta:.5f})'
+    return Delta
 
 def BinaryTreeAlgorithm(maze):
     Start = perf_counter()
@@ -93,8 +97,10 @@ def BinaryTreeAlgorithm(maze):
                 iCell.numVisited += 1            
                 iCell.link_cells(jCell)
                 
-    Stop = perf_counter()    
-    maze.Status = f'#CreatedByBinaryTree({Stop - Start:.5f})'
+    Stop = perf_counter()
+    Delta = Stop - Start
+    maze.Status = f'#CreatedByBinaryTree({Delta:.5f})'
+    return Delta
 
 def SidewinderAlgorithm(maze):
     Start = perf_counter()
@@ -122,8 +128,10 @@ def SidewinderAlgorithm(maze):
                 iCell.link_cells(jCell)
                 RunSet = deque()
                 
-    Stop = perf_counter()    
-    maze.Status = f'#CreatedBySidewinder({Stop - Start:.5f})'
+    Stop  = perf_counter()
+    Delta = Stop - Start  
+    maze.Status = f'#CreatedBySidewinder({Delta:.5f})'
+    return Delta
     
 
     

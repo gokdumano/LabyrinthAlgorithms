@@ -6,15 +6,19 @@ MAZECOL        = 20
 MAZEROW        = 20
 MAZESIZE       = (MAZECOL, MAZEROW)
 
-Path           = '../images/tiles/{:s}.png'.format
-maze           = Maze(MAZESIZE)
+#Path           = '../images/tiles/{:s}.png'.format
+#maze          = Maze(MAZESIZE)
 #utils.BinaryTreeAlgorithm(maze)
 #utils.SidewinderAlgorithm(maze)
 #utils.GrowingTreeAlgorithm(maze)
-utils.AldousBroderAlgorithm(maze)
+
+size1 = (  50,  50); maze1 = Maze(size1); time1 = utils.SidewinderAlgorithm(maze1); print(time1)
+size2 = ( 250, 250); maze2 = Maze(size2); time2 = utils.SidewinderAlgorithm(maze2); print(time2)
+size3 = (1000,1000); maze3 = Maze(size3); time3 = utils.SidewinderAlgorithm(maze3); print(time3)
+size4 = (5000,5000); maze4 = Maze(size4); time4 = utils.SidewinderAlgorithm(maze4); print(time4)
 
 #maze._reset()
-
+"""
 TILEWIDTH      = 20
 TILEHEIGHT     = 20
 DISPLAYWIDTH   = MAZECOL * TILEWIDTH
@@ -43,3 +47,4 @@ while PLAY:
     if PLAY:
         pygame.display.update()
         CLOCK.tick(FRAMERATE)
+"""
