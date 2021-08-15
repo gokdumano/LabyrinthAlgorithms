@@ -100,7 +100,7 @@
     <td>12.2466479</td>
   </tr>
   <tr>
-    <td>BinaryTreeAlgorithm</td>
+    <td>BinaryTreeAlgorithm 🥇</td>
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
