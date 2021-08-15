@@ -65,12 +65,12 @@
   </tr>
   <tr>
     <td>AldousBroderAlgorithm</td>
-    <td>+</td>
-    <td>+</td>
-    <td>x</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
     <td>0.3346393</td>
     <td>18.0111595</td>
-    <td>x</td>
+    <td>❌</td>
   </tr>
   <tr>
     <td>WilsonsAlgorithm</td>
@@ -92,27 +92,27 @@
   </tr>
   <tr>
     <td>GrowingTreeAlgorithm</td>
-    <td>+</td>
-    <td>+</td>
-    <td>+</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
     <td>0.0260674</td>
     <td>0.7234786</td>
     <td>12.2466479</td>
   </tr>
   <tr>
     <td>BinaryTreeAlgorithm</td>
-    <td>+</td>
-    <td>+</td>
-    <td>+</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
     <td>0.0176425</td>
     <td>0.4688853</td>
     <td>8.8348344</td>
   </tr>
   <tr>
     <td>SidewinderAlgorithm</td>
-    <td>+</td>
-    <td>+</td>
-    <td>+</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
     <td>0.0224984</td>
     <td>0.5559809</td>
     <td>10.595000</td>
