@@ -55,6 +55,7 @@ def WilsonsAlgorithm(maze):
     
 def HuntAndKillAlgorithm(maze):
     ...
+    
 def GrowingTreeAlgorithm(maze):
     Start  = perf_counter()
     

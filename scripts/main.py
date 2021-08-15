@@ -6,12 +6,12 @@ MAZECOL        = 20
 MAZEROW        = 20
 MAZESIZE       = (MAZECOL, MAZEROW)
 
-Path           = 'C:/Users/Punisher_12/Documents/GitHub/LabyrinthAlgorithms/Tiles/{:s}.png'.format
+Path           = '../images/tiles/{:s}.png'.format
 maze           = Maze(MAZESIZE)
-#utils.BinaryTree(maze)
-#utils.Sidewinder(maze)
-#utils.GrowingTree(maze)
-utils.AldousBroder(maze)
+#utils.BinaryTreeAlgorithm(maze)
+#utils.SidewinderAlgorithm(maze)
+#utils.GrowingTreeAlgorithm(maze)
+utils.AldousBroderAlgorithm(maze)
 
 #maze._reset()
 

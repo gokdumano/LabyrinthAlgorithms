@@ -1,2 +1,121 @@
 # LabyrinthAlgorithms
  Different ways to generate and solve mazes in python
+ 
+<table>
+<thead>
+  <tr>
+    <th rowspan="2"><br>Algorithm<br></th>
+    <th colspan="3">Maze Size<br>(ColxRow)</th>
+    <th colspan="3">Generation Time<br>(seconds)</th>
+  </tr>
+  <tr>
+    <td>50x50</td>
+    <td>250x250</td>
+    <td>1000x1000</td>
+    <td>50x50</td>
+    <td>250x250</td>
+    <td>1000x1000</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>RecursiveBacktrackerAlgorithm</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>EllersAlgorithm</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>KruskalsAlgorithm</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>PrimsAlgorithm</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>RecursiveDivisionAlgorithm</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>AldousBroderAlgorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>WilsonsAlgorithm</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>HuntAndKillAlgorithm</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>GrowingTreeAlgorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>BinaryTreeAlgorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>SidewinderAlgorithm</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
