@@ -172,7 +172,7 @@
 </tbody>
 </table>
 
-## Lots of Fun and Knowledge This Book Has
+## Lots of Fun and Knowledge This Book Has 👽
 <a href="http://www.mazesforprogrammers.com">
 <img src="http://www.mazesforprogrammers.com/images/cover.jpg"
      alt="Lots of Fun and Knowledge This Book Has"
