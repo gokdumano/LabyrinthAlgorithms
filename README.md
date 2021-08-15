@@ -2,16 +2,19 @@
  Different ways to generate and solve mazes in python
  
 ## Base Classes (Simple Yet Effective)
+<p>Everything started with a single 'Cell'</p>
+<img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/uml/Cell.png"
+     alt="Everything started with a single 'Cell'"
+     width="290"
+     height="220"
+     title="Everything started with a single 'Cell'">
 
-<div class="container">
- <img class="middle-img" src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/uml/Cell.png" height="220" width="290">
- <p>Everything started with a single 'Cell'</p>
-</div>
-
-<div class="container">
- <img class="middle-img" src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/uml/Cell.png" height="170" width="440">
- <p>Then they formed 'Maze's to fulfill their destiny...</p>
-</div>
+<p>Then they formed 'Maze's to fulfill their destiny...</p>
+<img src="https://raw.githubusercontent.com/gokdumano/LabyrinthAlgorithms/main/images/uml/Maze.png"
+     alt="Then they formed 'Maze's to fulfill their destiny"
+     width="400"
+     height="170"
+     title="Then they formed 'Maze's to fulfill their destiny...">
 
 ## Algorithm Performances
 <table>
